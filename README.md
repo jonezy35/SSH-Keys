@@ -8,8 +8,8 @@ There are good posts online about creating an SSH key to use for SSH’ing into 
 
 Creating a single SSH key for accessing a remote machine is straightforward, but we want to be able to create and use multiple different SSH keys. That requires us to name them uniquely. I will go through making two different SSH keys for two different remote machines.
 
-    1. Change your directory
-        ` cd ~/.ssh`
+1. Change your directory
+` cd ~/.ssh`
 
-    2. Create SSH Key
-        `ssh-keygen -t ed25519`
+2. Create SSH Key
+`ssh-keygen -t ed25519`
