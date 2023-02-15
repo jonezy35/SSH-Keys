@@ -30,9 +30,13 @@ Creating a single SSH key for accessing a remote machine is straightforward, but
         IdentityFile ~/.ssh/id_ed25519_Remote1
         ```
     - Save and quit by typing `ESC` followed by `:wq!` and `Enter`
-5. Test
+5. Send your SSH key to the remote machine
+    ```
+    ssh-copy-id -i ~/.ssh/id_ed25519_Remote1 user@remote1
+    ```
+6. Test
     - Now attempt to ssh into your remote machine. If it doesn’t ask you for a password, it worked.
-6. Disable password based authentication
+7. Disable password based authentication
     - Once SSH’d into your remote machine, it is best practice to disable password ssh authentication. `vim /etc/ssh/sshd_config`
     - Change `PasswordAuthentication` from `yes` to `no`
     - Restart ssh `sudo systemctl restart sshd`
